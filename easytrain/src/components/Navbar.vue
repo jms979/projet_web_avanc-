@@ -62,7 +62,7 @@
 
 <script>
 export default {
-  name: "navbar",
+  name: "NavBar",
   props: {
     connected: { type: Boolean },
   },
