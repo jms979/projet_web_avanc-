@@ -2,7 +2,7 @@
     <div>
         <nav-bar />
         <h2>Bienvenue sur Easy Train</h2>
-        <div>qmqm</div>
+        
     </div>
 </template>
 
@@ -10,14 +10,13 @@
 import NavBar from '../components/Navbar.vue';
 
 export default {
-    name: "homepage",
+    name: "HomePage",
     props: {},
     components: {
         NavBar,
     },
 };
 </script>
-
 
 <style scoped>
 </style>

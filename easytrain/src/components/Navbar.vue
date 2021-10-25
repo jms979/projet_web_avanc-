@@ -1,34 +1,17 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg">
-      <router-link class="navbar-brand" to="/"
-        ><img
+    <nav class="navbar navbar-expand">
+      <router-link class="navbar-brand" to="/">
+      <img
           src="../assets/logo.png"
           alt="logo"
           class="img-fluid"
           width="48"
-        /><span>EasyTrain</span></router-link
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"
-          ><img src="../assets/logo.png" class="img-fluid" width="30"
-        /></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        /><span>EasyTrain</span></router-link>
         <ul class="navbar-nav mr-auto w-100 d-flex justify-content-end">
           <div v-if="connected === true">
             <li class="nav-item">
-              <router-link class="nav-link" to="/orders"
-                >Mes commandes</router-link
-              >
+              <router-link class="nav-link" to="/orders">Mes commandes</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/me">Bonjour @name</router-link>
@@ -39,23 +22,16 @@
           </div>
           <div v-else>
             <li class="nav-item">
-              <router-link class="nav-link" to="/orders"
-                >Mes commandes</router-link
-              >
+              <router-link class="nav-link" to="/orders">Mes commandes</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/signup"
-                >S'inscrire</router-link
-              >
+              <router-link class="nav-link" to="/signup">S'inscrire</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/login"
-                >Se connecter</router-link
-              >
+              <router-link class="nav-link" to="/login">Se connecter</router-link>
             </li>
           </div>
         </ul>
-      </div>
     </nav>
   </header>
 </template>
@@ -67,7 +43,9 @@ export default {
     connected: { type: Boolean },
   },
   data() {
-    return {};
+    return {
+      visible: false,
+    };
   },
   methods: {
     logOut() {
@@ -140,7 +118,7 @@ header div {
 }
 
 .navbar .nav-item .nav-link:first-letter {
-  color: #f93d32;
+  color: #e96d25;
 }
 
 .navbar-toggler-icon img {
@@ -148,5 +126,9 @@ header div {
 }
 #navbarNavDropdown {
   background-color: #282828;
+}
+
+.nav-link:hover {
+  color: #FAE6CD !important;
 }
 </style>
