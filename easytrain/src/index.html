@@ -23,7 +23,7 @@
 <body>
     <div id="app">
         <main>
-            <router-view :connected="connected" @add-user="addUser" @log-in="logIn" @log-out="logOut"></router-view>
+            <router-view :resultat="resultat" :billets="billets" :connected="connected" @add-user="addUser" @log-in="logIn" @log-out="logOut"  @re-search="research" @acheter="acheter"></router-view>
         </main>
         <footer role="contentinfo" class="footer footer-default">
             <div class="container">

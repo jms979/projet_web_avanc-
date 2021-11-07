@@ -22,7 +22,7 @@
           </div>
           <div v-else>
             <li class="nav-item">
-              <router-link class="nav-link" to="/orders">Mes commandes</router-link>
+              <router-link class="nav-link" to="/panier">Mes commandes</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/signup">S'inscrire</router-link>

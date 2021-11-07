@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-
+const train = require('../data/data.json')
 const bcrypt = require('bcrypt')
 const { Client } = require('pg')
 
@@ -126,5 +126,37 @@ router.get('/me', async(req, res) => {
     res.json(user)
     return
 })
+//route qui retourne la listes des trajets de train
+router.post('/research', (req, res) => {
+    const depart = req.body.depart
+    const arrive = req.body.arrive
+    const jour = req.body.jour
+    const prem = []
+    const list_train =[]
+    const list_jour = []
+    for (let i =0;i<train.length; i++){
+        if (train[i].lieu_depart === depart){
+            prem.push(train[i])
+        }
+    }
+    for (let i =0;i<prem.length; i++){
+        if (prem[i].ville_arrive === arrive){
+            list_train.push(prem[i])
+        }
+    }
 
+    for (let i =0;i<list_train.length; i++) {
+        if (list_train[i].jour === jour) {
+            list_jour.push(list_train[i])
+        }
+    }
+    return res.json({list_jour})
+
+})
+//route  qui ajoute un billet de train au panier
+router.post('/pay', (req, res) => {
+    console.log("achat en cours")
+    const re = req.body
+    return  res.status(200).json({ re })
+})
 module.exports = router
