@@ -1,7 +1,11 @@
 # easytrain
 
+The project should be pulled from the Main branch.
+
 ## Project setup
 ```
+cd easytrain/
+
 npm install
 ```
 
@@ -10,7 +14,7 @@ npm install
 npm run start
 ```
 
-# DataBase Creation :
+# DataBase Creation (PostgreSQL) :
 
 ```
 CREATE DATABASE "easytrain"

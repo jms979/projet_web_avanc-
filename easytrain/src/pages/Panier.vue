@@ -2,19 +2,21 @@
 
   <div>
     <nav-bar :connected="connected" @log-out="logOut"></nav-bar>
-    <h2 class="titre">Panier</h2>
-    <h4> &nbsp;</h4>
-    <h5> &nbsp;</h5>
-      <li class="container" v-for="don of billets" :key="don.heure_depart">
-        <p>Départ de {{ find(don.heure_depart).gare_depart}}  à  {{ find(don.heure_depart).heure_depart }} le {{ find(don.heure_depart).jour }}</p>
-        <p> Arrivé   {{ find(don.heure_depart).gare_arrive}}  à  {{ find(don.heure_depart).heure_arrive }}</p>
-        <p1>{{ find(don.heure_depart).prix }} €</p1>
-        <h5> &nbsp;</h5>
-        <h5> &nbsp;</h5>
-      </li>
-    <h5> &nbsp;</h5>
-    <h5> &nbsp;</h5>
-    <p>Total à payer: {{total()}} €</p>
+    <div class="cart">
+      <h2 class="titre">Panier</h2>
+      <h4> &nbsp;</h4>
+      <h5> &nbsp;</h5>
+        <li class="container" v-for="don of billets" :key="don.heure_depart">
+          <p>Départ de {{ find(don.heure_depart).gare_depart}}  à  {{ find(don.heure_depart).heure_depart }} le {{ find(don.heure_depart).jour }}</p>
+          <p> Arrivé   {{ find(don.heure_depart).gare_arrive}}  à  {{ find(don.heure_depart).heure_arrive }}</p>
+          <p1>{{ find(don.heure_depart).prix }} €</p1>
+          <h5> &nbsp;</h5>
+          <h5> &nbsp;</h5>
+        </li>
+      <h5> &nbsp;</h5>
+      <h5> &nbsp;</h5>
+      <p>Total à payer: {{total()}} €</p>
+    </div>
   </div>
 </template>
 
@@ -64,8 +66,8 @@ module.exports = {
   background-color: whitesmoke;
   list-style: none;
 }
-p1{
-  left:1000px;
-  bottom: 100px;
+
+.cart {
+  min-height: calc(100vh - 306px);
 }
 </style>
