@@ -5,20 +5,29 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Project run
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm run start
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+# DataBase Creation :
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+CREATE DATABASE "easytrain"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
+    
+CREATE TABLE public.users
+(
+    id serial NOT NULL,
+    email text NOT NULL,
+    username text NOT NULL,
+    password text NOT NULL,
+    PRIMARY KEY (id)
+);
+
+ALTER TABLE public.users
+    OWNER to postgres;
+```

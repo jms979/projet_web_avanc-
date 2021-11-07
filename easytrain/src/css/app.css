@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* footer */
+
+footer {
+    color: rgb(145, 148, 150);
+    background-color: black;
+    background-image: none;
+    box-sizing: border-box;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 50px 0 20px;
+}
+
+footer th {
+    color: white;
+}
+
+footer a:hover,
+footer a:link,
+footer a:visited {
+    color: white;
+    text-decoration: none;
+    font-weight: 420;
+}
+
+footer a:hover {
+    color: #F93D32;
+}
+
+footer nav {
+    padding: 10 0;
+}
+
+footer li {
+    padding-right: 1.05em;
+    width: 100%;
+}
+
+footer h3 {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.966667px;
+    line-height: 16.8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+footer nav a,
+footer nav-inverse a {
+    padding: .2em 0;
+    margin-bottom: .75em;
+    display: inline-block;
+}
+
+footer section {
+    display: flex;
+}
+
+.text-right {
+    text-align: right !important;
+}
