@@ -1,20 +1,26 @@
 <template>
     <div>
-        <nav-bar />
+        <nav-bar :connected="connected" @log-out="logOut"></nav-bar>
         <h2>Bienvenue sur Easy Train</h2>
         
     </div>
 </template>
 
 <script>
-import NavBar from '../components/Navbar.vue';
-
-export default {
+const NavBar = window.httpVueLoader("./components/Navbar.vue");
+module.exports = {
     name: "HomePage",
-    props: {},
+    props: {
+        connected: { type: Boolean }
+    },
     components: {
         NavBar,
     },
+    methods: {
+        logOut () {
+            this.$emit('log-out')
+        },
+    }
 };
 </script>
 

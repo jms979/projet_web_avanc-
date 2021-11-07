@@ -37,7 +37,7 @@
 </template>
 
 <script>
-export default {
+module.exports = {
   name: "NavBar",
   props: {
     connected: { type: Boolean },
