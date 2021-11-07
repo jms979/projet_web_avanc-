@@ -1,8 +1,18 @@
 <template xmlns="http://www.w3.org/1999/html">
   <div class="container">
     <form id="auto-suggest"  @submit.prevent="research">
-      <input type="text" placeholder="Départ: ville" v-model="donnees.depart" required/>
-      <input type="text" placeholder="Arivée: ville" v-model="donnees.arrive"  required/>
+      <span>Départ: ville</span>
+      <select v-model="donnees.depart" required>
+        <option v-for="option in options" v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+      <span>Arrivée: ville</span>
+      <select v-model="donnees.arrive" required>
+        <option v-for="option in options" v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
       <input type="text" placeholder="Jour de départ (JJ/MM/AAAA)" v-model="donnees.jour"  required/>
 
       <button  class="btn" type="submit">Rechercher</button>
@@ -27,7 +37,13 @@ module.exports = {
         depart:"",
         arrive:"",
         jour:""
-      }
+      },
+      options: [
+        { text: 'Bordeaux', value: 'Bordeaux' },
+        { text: 'Lille', value: 'Lille' },
+        { text: 'Marseille', value: 'Marseille' },
+        { text: 'Paris', value: 'Paris' }
+      ]
     };
   },
   methods:
