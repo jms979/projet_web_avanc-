@@ -1,13 +1,13 @@
 const Home = window.httpVueLoader('./pages/HomePage.vue')
 const NavBar = window.httpVueLoader('./components/NavBar.vue')
-    // const LogIn = window.httpVueLoader('./components/LogIn.vue')
-    // const SignUp = window.httpVueLoader('./components/SignUp.vue')
+const LogIn = window.httpVueLoader('./pages/LogIn.vue')
+const SignUp = window.httpVueLoader('./pages/SignUp.vue')
     // const Profile = window.httpVueLoader('./components/Profile.vue')
 
 const routes = [
     { path: '/', component: Home },
-    // { path: '/login', component: LogIn },
-    // { path: '/signup', component: SignUp },
+    { path: '/login', component: LogIn },
+    { path: '/signup', component: SignUp },
     // { path: '/me', component: Profile },
 ]
 
